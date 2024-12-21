@@ -11,7 +11,7 @@ public interface ArticleRepository extends Repository<Article> {
 
     Article selectById(int id);
 
-    void update(Article article);
+    void update(Article client);
 
     List<Article> articleOfDette(Dette dette);
 }

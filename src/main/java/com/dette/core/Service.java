@@ -10,7 +10,4 @@ public interface Service<T> {
     T getBy(String name);
 
     int count();
-
-    void update(T value);
-
 }

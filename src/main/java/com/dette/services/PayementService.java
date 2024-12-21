@@ -37,8 +37,8 @@ public class PayementService implements IPayementService {
     }
 
     @Override
-    public void update(Payement payement) {
-        payement.onPreUpdated();
+    public void modifier(Payement payement) {
+        payement.onPrePersist();
         payementRepository.update(payement);
     }
 

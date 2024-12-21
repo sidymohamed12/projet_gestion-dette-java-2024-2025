@@ -7,6 +7,7 @@ import com.dette.entities.Client;
 import com.dette.entities.Dette;
 
 public interface IDetteService extends Service<Dette> {
+    void modifier(Dette dette);
 
     Dette getById(int id);
 

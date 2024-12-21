@@ -7,5 +7,6 @@ import com.dette.entities.Article;
 import com.dette.entities.Dette;
 
 public interface IArticleService extends Service<Article> {
+    void modifier(Article article);
     List<Article> getArticlesDette(Dette dette);
 }

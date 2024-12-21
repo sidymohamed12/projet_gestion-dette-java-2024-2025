@@ -17,6 +17,9 @@ public class ArticleService implements IArticleService {
 
     @Override
     public void create(Article value) {
+        int id = count() + 1;
+        int size = String.valueOf(id).length();
+        value.setRef("ART" + "0".repeat(size > 4 ? 0 : 4 - size) + id);
         value.onPrePersist();
         articleRepository.insert(value);
     }
@@ -38,7 +41,7 @@ public class ArticleService implements IArticleService {
     }
 
     @Override
-    public void update(Article article) {
+    public void modifier(Article article) {
         article.onPreUpdated();
         articleRepository.update(article);
     }

@@ -10,9 +10,11 @@ import javax.persistence.Table;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 @Getter
 @Setter
+@ToString
 @EqualsAndHashCode(callSuper = false)
 @Entity
 @Table(name = "payement")
@@ -25,9 +27,4 @@ public class Payement extends AbstractEntity {
     private Dette dette;
 
     private Double montant;
-
-    @Override
-    public String toString() {
-        return "Payement [date=" + date + ", montant=" + montant + "]";
-    }
 }

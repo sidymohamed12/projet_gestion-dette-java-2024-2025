@@ -24,15 +24,15 @@ import java.time.LocalDateTime;
 @MappedSuperclass
 public class AbstractEntity {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    protected Integer id;
-
     @Column(name = "createdAt")
     protected LocalDateTime createdAt;
 
     @Column(name = "updatedAt")
     protected LocalDateTime updatedAt;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    protected Integer id;
 
     @OneToOne
     @JoinColumn(name = "createdBy", referencedColumnName = "id")

@@ -4,7 +4,6 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Convert;
 import javax.persistence.Entity;
@@ -49,7 +48,7 @@ public class Dette extends AbstractEntity {
     @Column(name = "etatId")
     private Etat etatD;
 
-    @OneToMany(mappedBy = "dette", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "dette")
     private List<Detail> details = new ArrayList<>();
 
     @OneToMany(mappedBy = "dette")

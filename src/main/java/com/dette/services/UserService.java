@@ -37,7 +37,7 @@ public class UserService implements IUserService {
     }
 
     @Override
-    public void update(User user) {
+    public void modifier(User user) {
         user.onPreUpdated();
         userRepository.update(user);
     }

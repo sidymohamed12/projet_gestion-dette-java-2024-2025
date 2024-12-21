@@ -9,8 +9,4 @@ public interface Repository<T> {
 
     int count();
 
-    void update(T value);
-
-    T selectById(int id);
-
 }

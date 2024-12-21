@@ -22,6 +22,19 @@ public abstract class ViewImplement<T> implements View<T> {
         }
     }
 
+    // ------------------------------------------------------------------------------------------------------------
+
+    public static LocalDate formatDate(String date) {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+        return LocalDate.parse(date, formatter);
+    }
+
+    // ------------------------------------------------------------------------------------------------------------
+    public static LocalTime formatHeure(String heure) {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm");
+        return LocalTime.parse(heure, formatter);
+    }
+
     // ----------------------------------------------------------------------------------------------
 
     @Override

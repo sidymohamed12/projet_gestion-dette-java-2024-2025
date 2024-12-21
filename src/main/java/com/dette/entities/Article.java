@@ -23,6 +23,15 @@ public class Article extends AbstractEntity {
     @OneToMany(mappedBy = "article")
     private List<Detail> details;
 
+    public Article() {
+    }
+
+    public Article(String libelle, Integer qteStock, Double prix) {
+        this.libelle = libelle;
+        this.qteStock = qteStock;
+        this.prix = prix;
+    }
+
     public void addDetail(Detail detail) {
         details.add(detail);
     }

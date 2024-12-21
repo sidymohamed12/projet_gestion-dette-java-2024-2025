@@ -2,7 +2,9 @@ package com.dette.services;
 
 import java.util.List;
 
+import com.dette.entities.Article;
 import com.dette.entities.Detail;
+import com.dette.entities.Dette;
 import com.dette.repository.implement.DetailRepository;
 import com.dette.services.servicespe.IDetailService;
 
@@ -36,9 +38,13 @@ public class DetailService implements IDetailService {
     }
 
     @Override
-    public void update(Detail detail) {
-        detail.onPreUpdated();
-        detailRepository.update(detail);
+    public List<Detail> getDetailOfArticleDette(List<Article> articles, Dette dette) {
+        return detailRepository.getDetailOfArticleDette(articles, dette);
+    }
+
+    @Override
+    public void modifier(Detail value) {
+        detailRepository.update(value);
     }
 
 }

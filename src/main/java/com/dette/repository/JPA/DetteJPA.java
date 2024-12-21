@@ -12,7 +12,7 @@ import com.dette.repository.implement.DetteRepository;
 public class DetteJPA extends RepositoryJpaImpl<Dette> implements DetteRepository {
     public DetteJPA() {
         type = Dette.class;
-        coloneSelectBy = "libelle";
+        coloneSelectBy = null;
     }
 
     public List<Dette> detteOfClient(Client client) {
@@ -30,4 +30,5 @@ public class DetteJPA extends RepositoryJpaImpl<Dette> implements DetteRepositor
             return null;
         }
     }
+
 }

@@ -37,8 +37,8 @@
 			<property name="jakarta.persistence.jdbc.password" value="SMS" />
 			<property name="jakarta.persistence.jdbc.driver" value="org.postgresql.Driver" />
 
-			<property name="hibernate.show_sql" value="true" />
-			<property name="hibernate.format_sql" value="true" />
+			<!-- <property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.format_sql" value="true" /> -->
 
 			<!-- Paramètres supplémentaires -->
 			<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" />
@@ -98,3 +98,5 @@
 		</properties>
 	</persistence-unit>
 </persistence>
+
+<!-- $2a$10$qnEwPA19Sluj8mv82SYWEeeUe8pRCSP5fnVoqjtLtJtFc7FGy7QLe -->

@@ -37,7 +37,7 @@ public class DetteService implements IDetteService {
     }
 
     @Override
-    public void update(Dette dette) {
+    public void modifier(Dette dette) {
         dette.onPreUpdated();
         detteRepository.update(dette);
     }
